@@ -1,0 +1,30 @@
+#{extends 'main.html' /} #{set title:'MEngage Definitions' /} #{top-new
+urlNew:"/mobConfig?init=1",urlResults:"/mobStatus"/}
+
+<table style="margin: 0px">
+	<thead>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Status</th>
+	</thead>
+	<tbody>
+
+		%{ for (campaign in allCampaigns) { }%
+		<tr>
+			<td width="10%">${campaign.id}</td>
+			<td width="70%">${campaign.name}</td>
+			<td width="20%"> <a href="${play.Play.configuration.get("mkto.mobileCustomUrl")}/public/${campaign.campaignId}.json">Install</a>
+				| <br> <a href="/mobConfig?init=2&id=${campaign.id}">Edit</a>
+				| <br> <a href="/cancelCampaign?id=${campaign.id}&type=1006">Cancel</a></td>
+		</tr>
+		%{ } }%
+
+	</tbody>
+</table>
+
+<script>
+	$(document).ready(function() {
+		$("#mobdd").addClass("active");
+	});
+</script>
+

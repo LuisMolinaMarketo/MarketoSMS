@@ -1,0 +1,33 @@
+#{extends 'main.html' /} #{set title:'Formula Campaigns' /} #{top-new
+urlNew:"/formulaConfig",urlResults:"/execFormulaStatus"/}
+
+<table style="margin:0px">
+	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Campaign Formula</th>
+			<th>Status</th>
+			<th>Status Message</th>
+			<th>Number of Leads Synced</th>
+		</tr>
+	</thead>
+	<tbody>
+
+		%{ for (campaign in allCampaigns) { }%
+		<tr>
+			<td >${campaign.id}</td>
+			<td >${campaign.formula}</td>
+			<td >${campaign.status}</td>
+			<td >${campaign.statusMessage}</td>
+			<td >${campaign.numLeadsSynced}</td>
+		</tr>
+		%{ } }%
+
+	</tbody>
+</table>
+
+<script>
+	$(document).ready(function() {$("#formuladd").addClass("active");});
+</script>
+
+

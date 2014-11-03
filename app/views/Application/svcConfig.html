@@ -1,0 +1,46 @@
+#{extends 'main.html' /} #{top-results
+urlNew:"/svcConfig",urlResults:"/svcConfig"/}
+
+<p>
+
+	#{form @Application.svcConfig()} <input type="text" name="name"
+		id="name" placeholder="Name of the Type 1 Service" maxlength="50" /> 
+		<input
+		type="text" name="url" id="url" 
+		placeholder="URL of Type 1 service " 
+		maxlength="200" size="100" style="font-size: 16px" />
+		
+		<input
+		type="text" name="reurl" id="reurl" value="${redirectUrl}"
+		readonly
+		maxlength="200" size="200" style="font-size: 16px" /> <input
+		type="submit" id="submit" value="Submit" /> #{/form}
+</p>
+
+
+<script>
+	jQuery(function() {
+		$("#submit")
+				.click(
+						function() {
+							$(".alert-box").hide();
+							var hasError = false;
+
+							var urlVal = $("#url").val();
+
+							if (urlVal == '') {
+								$("#url")
+										.after(
+												'<div class="alert-box alert">Need URL to work</span>');
+								hasError = true;
+							} 							if (hasError == true) {
+								return false;
+							}
+						});
+	});
+
+	$(document).ready(function() {
+		$("#svcdd").addClass("active");
+	});
+</script>
+

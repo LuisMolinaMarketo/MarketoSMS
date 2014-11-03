@@ -1,0 +1,35 @@
+#{extends 'main.html' /} #{set title:'Blog services' /} #{top-new
+urlNew:"/svcConfig?init=1",urlResults:"/blogStatus"/}
+
+<table style="margin:0px">
+	<thead>
+			<th>Id</th>
+			<th>Name</th>
+			<th>URL</th>
+			<th>Tokens</th>
+			<th>Actions</th>
+	</thead>
+	<tbody>
+
+		%{ for (service in allServices) { }%
+		<tr >
+			<td >${service.id}</td>
+			<td >${service.name}</td>
+			<td >${service.mktoURL} | <b> Redirect to : </b> ${service.redirectURL} </td>
+			<td >${service.oauthToken} </td>
+			<td > <a
+				href="${service.mktoURL}" target="_newtab">Install</a> | <a
+				href="/cancelCampaign?id=${service.id}&type=1005">Cancel</a></td>
+
+		</tr>
+		%{ } }%
+
+	</tbody>
+</table>
+
+<script>
+	$(document).ready(function() {
+		$("#svcdd").addClass("active");
+	});
+</script>
+

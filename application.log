@@ -1,0 +1,432 @@
+15:15:42,975 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+15:15:42,980 ERROR ~ Module secure will not be loaded because C:\Install\play-1.2.5\modules\secure does not exist
+15:15:43,779 WARN  ~ You're running Play! in DEV mode
+15:15:43,879 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+15:16:11,088 ERROR ~ Cannot include routes for module secure (not found)
+15:16:17,441 INFO  ~ Connected to jdbc:h2:~/db/h2/playProtected;MVCC=TRUE
+15:16:17,796 INFO  ~ JPA -> Adding package: com.marketo.mktows.wsdl
+15:16:18,793 INFO  ~ Application '2waySMS' is now started !
+15:16:20,616 ERROR ~ 
+
+@6ibf5d13f
+Internal Server Error (500) for request GET /
+
+Unexpected error
+Unexpected error : Cannot read parameter names for static void controllers.Secure.checkAccess() throws java.lang.Throwable
+
+play.exceptions.UnexpectedException: Cannot read parameter names for static void controllers.Secure.checkAccess() throws java.lang.Throwable
+	at play.utils.Java.parameterNames(Java.java:217)
+	at play.mvc.ActionInvoker.getActionMethodArgs(ActionInvoker.java:622)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:484)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:479)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:328)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:142)
+	at Invocation.HTTP Request(Play!)
+15:16:48,835 INFO  ~ Checking to see if any feeds are to be fetched
+15:16:48,995 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:16:48,995 DEBUG ~ Done printing active blog campaign list
+15:18:29,753 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+15:18:29,757 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+15:18:30,587 WARN  ~ You're running Play! in DEV mode
+15:18:30,717 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+15:18:46,961 INFO  ~ Connected to jdbc:h2:~/db/h2/playProtected;MVCC=TRUE
+15:18:47,360 INFO  ~ JPA -> Adding package: com.marketo.mktows.wsdl
+15:18:48,312 INFO  ~ Application '2waySMS' is now started !
+15:19:18,342 INFO  ~ Checking to see if any feeds are to be fetched
+15:19:18,561 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:19:18,561 DEBUG ~ Done printing active blog campaign list
+15:19:48,586 INFO  ~ Checking to see if any feeds are to be fetched
+15:19:48,587 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:19:48,587 DEBUG ~ Done printing active blog campaign list
+15:19:57,008 DEBUG ~ mId:IGP1; Pass:iix+chDB7mdFJDMfFBDnBg==
+15:20:18,364 DEBUG ~ Following blogs are in fetch queue
+15:20:18,365 DEBUG ~ No more blogs in fetch queue
+15:20:18,613 INFO  ~ Checking to see if any feeds are to be fetched
+15:20:18,614 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:20:18,614 DEBUG ~ Done printing active blog campaign list
+15:20:48,649 INFO  ~ Checking to see if any feeds are to be fetched
+15:20:48,650 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:20:48,651 DEBUG ~ Done printing active blog campaign list
+15:21:18,679 INFO  ~ Checking to see if any feeds are to be fetched
+15:21:18,679 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:21:18,679 DEBUG ~ Done printing active blog campaign list
+15:21:48,392 DEBUG ~ Following blogs are in fetch queue
+15:21:48,392 DEBUG ~ No more blogs in fetch queue
+15:21:48,716 INFO  ~ Checking to see if any feeds are to be fetched
+15:21:48,717 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:21:48,717 DEBUG ~ Done printing active blog campaign list
+15:22:18,749 INFO  ~ Checking to see if any feeds are to be fetched
+15:22:18,750 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:22:18,750 DEBUG ~ Done printing active blog campaign list
+15:22:48,781 INFO  ~ Checking to see if any feeds are to be fetched
+15:22:48,782 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:22:48,782 DEBUG ~ Done printing active blog campaign list
+15:23:18,418 DEBUG ~ Following blogs are in fetch queue
+15:23:18,418 DEBUG ~ No more blogs in fetch queue
+15:23:18,810 INFO  ~ Checking to see if any feeds are to be fetched
+15:23:18,811 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:23:18,811 DEBUG ~ Done printing active blog campaign list
+15:23:48,854 INFO  ~ Checking to see if any feeds are to be fetched
+15:23:48,854 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:23:48,854 DEBUG ~ Done printing active blog campaign list
+15:24:18,886 INFO  ~ Checking to see if any feeds are to be fetched
+15:24:18,888 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:24:18,888 DEBUG ~ Done printing active blog campaign list
+15:24:48,452 DEBUG ~ Following blogs are in fetch queue
+15:24:48,452 DEBUG ~ No more blogs in fetch queue
+15:24:48,930 INFO  ~ Checking to see if any feeds are to be fetched
+15:24:48,930 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:24:48,930 DEBUG ~ Done printing active blog campaign list
+15:25:18,963 INFO  ~ Checking to see if any feeds are to be fetched
+15:25:18,963 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:25:18,963 DEBUG ~ Done printing active blog campaign list
+15:25:48,987 INFO  ~ Checking to see if any feeds are to be fetched
+15:25:48,988 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:25:48,988 DEBUG ~ Done printing active blog campaign list
+15:26:18,478 DEBUG ~ Following blogs are in fetch queue
+15:26:18,478 DEBUG ~ No more blogs in fetch queue
+15:26:19,021 INFO  ~ Checking to see if any feeds are to be fetched
+15:26:19,021 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:26:19,021 DEBUG ~ Done printing active blog campaign list
+15:26:49,053 INFO  ~ Checking to see if any feeds are to be fetched
+15:26:49,053 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:26:49,054 DEBUG ~ Done printing active blog campaign list
+15:27:19,087 INFO  ~ Checking to see if any feeds are to be fetched
+15:27:19,087 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:27:19,088 DEBUG ~ Done printing active blog campaign list
+15:27:48,509 DEBUG ~ Following blogs are in fetch queue
+15:27:48,510 DEBUG ~ No more blogs in fetch queue
+15:27:49,110 INFO  ~ Checking to see if any feeds are to be fetched
+15:27:49,112 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:27:49,112 DEBUG ~ Done printing active blog campaign list
+15:28:19,138 INFO  ~ Checking to see if any feeds are to be fetched
+15:28:19,139 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:28:19,139 DEBUG ~ Done printing active blog campaign list
+15:28:49,165 INFO  ~ Checking to see if any feeds are to be fetched
+15:28:49,166 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:28:49,167 DEBUG ~ Done printing active blog campaign list
+15:29:18,563 DEBUG ~ Following blogs are in fetch queue
+15:29:18,563 DEBUG ~ No more blogs in fetch queue
+15:29:19,195 INFO  ~ Checking to see if any feeds are to be fetched
+15:29:19,196 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:29:19,196 DEBUG ~ Done printing active blog campaign list
+15:29:49,231 INFO  ~ Checking to see if any feeds are to be fetched
+15:29:49,232 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:29:49,232 DEBUG ~ Done printing active blog campaign list
+15:30:19,262 INFO  ~ Checking to see if any feeds are to be fetched
+15:30:19,263 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:30:19,263 DEBUG ~ Done printing active blog campaign list
+15:30:48,597 DEBUG ~ Following blogs are in fetch queue
+15:30:48,597 DEBUG ~ No more blogs in fetch queue
+15:30:49,289 INFO  ~ Checking to see if any feeds are to be fetched
+15:30:49,289 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:30:49,290 DEBUG ~ Done printing active blog campaign list
+15:31:19,328 INFO  ~ Checking to see if any feeds are to be fetched
+15:31:19,328 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:31:19,328 DEBUG ~ Done printing active blog campaign list
+15:31:49,353 INFO  ~ Checking to see if any feeds are to be fetched
+15:31:49,354 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:31:49,354 DEBUG ~ Done printing active blog campaign list
+15:32:18,629 DEBUG ~ Following blogs are in fetch queue
+15:32:18,629 DEBUG ~ No more blogs in fetch queue
+15:32:19,402 INFO  ~ Checking to see if any feeds are to be fetched
+15:32:19,402 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:32:19,402 DEBUG ~ Done printing active blog campaign list
+15:32:49,425 INFO  ~ Checking to see if any feeds are to be fetched
+15:32:49,427 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:32:49,427 DEBUG ~ Done printing active blog campaign list
+15:33:19,457 INFO  ~ Checking to see if any feeds are to be fetched
+15:33:19,457 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:33:19,457 DEBUG ~ Done printing active blog campaign list
+15:33:48,656 DEBUG ~ Following blogs are in fetch queue
+15:33:48,656 DEBUG ~ No more blogs in fetch queue
+15:33:49,482 INFO  ~ Checking to see if any feeds are to be fetched
+15:33:49,482 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:33:49,482 DEBUG ~ Done printing active blog campaign list
+15:34:19,511 INFO  ~ Checking to see if any feeds are to be fetched
+15:34:19,512 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:34:19,512 DEBUG ~ Done printing active blog campaign list
+15:34:49,549 INFO  ~ Checking to see if any feeds are to be fetched
+15:34:49,549 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:34:49,550 DEBUG ~ Done printing active blog campaign list
+15:35:18,690 DEBUG ~ Following blogs are in fetch queue
+15:35:18,690 DEBUG ~ No more blogs in fetch queue
+15:35:19,574 INFO  ~ Checking to see if any feeds are to be fetched
+15:35:19,575 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:35:19,575 DEBUG ~ Done printing active blog campaign list
+15:35:49,605 INFO  ~ Checking to see if any feeds are to be fetched
+15:35:49,607 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:35:49,607 DEBUG ~ Done printing active blog campaign list
+15:36:19,651 INFO  ~ Checking to see if any feeds are to be fetched
+15:36:19,651 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:36:19,651 DEBUG ~ Done printing active blog campaign list
+15:36:48,716 DEBUG ~ Following blogs are in fetch queue
+15:36:48,716 DEBUG ~ No more blogs in fetch queue
+15:36:49,691 INFO  ~ Checking to see if any feeds are to be fetched
+15:36:49,692 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:36:49,692 DEBUG ~ Done printing active blog campaign list
+15:37:19,719 INFO  ~ Checking to see if any feeds are to be fetched
+15:37:19,719 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:37:19,720 DEBUG ~ Done printing active blog campaign list
+15:37:49,749 INFO  ~ Checking to see if any feeds are to be fetched
+15:37:49,750 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:37:49,750 DEBUG ~ Done printing active blog campaign list
+15:38:18,772 DEBUG ~ Following blogs are in fetch queue
+15:38:18,772 DEBUG ~ No more blogs in fetch queue
+15:38:19,772 INFO  ~ Checking to see if any feeds are to be fetched
+15:38:19,773 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:38:19,773 DEBUG ~ Done printing active blog campaign list
+15:38:49,806 INFO  ~ Checking to see if any feeds are to be fetched
+15:38:49,807 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:38:49,807 DEBUG ~ Done printing active blog campaign list
+15:39:19,850 INFO  ~ Checking to see if any feeds are to be fetched
+15:39:19,851 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:39:19,851 DEBUG ~ Done printing active blog campaign list
+15:39:48,804 DEBUG ~ Following blogs are in fetch queue
+15:39:48,804 DEBUG ~ No more blogs in fetch queue
+15:39:49,892 INFO  ~ Checking to see if any feeds are to be fetched
+15:39:49,892 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:39:49,892 DEBUG ~ Done printing active blog campaign list
+15:40:19,915 INFO  ~ Checking to see if any feeds are to be fetched
+15:40:19,915 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:40:19,915 DEBUG ~ Done printing active blog campaign list
+15:40:49,946 INFO  ~ Checking to see if any feeds are to be fetched
+15:40:49,946 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:40:49,946 DEBUG ~ Done printing active blog campaign list
+15:41:18,833 DEBUG ~ Following blogs are in fetch queue
+15:41:18,833 DEBUG ~ No more blogs in fetch queue
+15:41:19,978 INFO  ~ Checking to see if any feeds are to be fetched
+15:41:19,979 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:41:19,979 DEBUG ~ Done printing active blog campaign list
+15:41:50,016 INFO  ~ Checking to see if any feeds are to be fetched
+15:41:50,017 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:41:50,017 DEBUG ~ Done printing active blog campaign list
+15:42:20,051 INFO  ~ Checking to see if any feeds are to be fetched
+15:42:20,051 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:42:20,051 DEBUG ~ Done printing active blog campaign list
+15:42:48,862 DEBUG ~ Following blogs are in fetch queue
+15:42:48,862 DEBUG ~ No more blogs in fetch queue
+15:42:50,080 INFO  ~ Checking to see if any feeds are to be fetched
+15:42:50,081 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:42:50,081 DEBUG ~ Done printing active blog campaign list
+15:43:20,107 INFO  ~ Checking to see if any feeds are to be fetched
+15:43:20,108 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:43:20,108 DEBUG ~ Done printing active blog campaign list
+15:43:50,140 INFO  ~ Checking to see if any feeds are to be fetched
+15:43:50,141 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:43:50,141 DEBUG ~ Done printing active blog campaign list
+15:44:18,921 DEBUG ~ Following blogs are in fetch queue
+15:44:18,922 DEBUG ~ No more blogs in fetch queue
+15:44:20,186 INFO  ~ Checking to see if any feeds are to be fetched
+15:44:20,188 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:44:20,188 DEBUG ~ Done printing active blog campaign list
+15:44:50,213 INFO  ~ Checking to see if any feeds are to be fetched
+15:44:50,213 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:44:50,213 DEBUG ~ Done printing active blog campaign list
+15:45:20,239 INFO  ~ Checking to see if any feeds are to be fetched
+15:45:20,240 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:45:20,240 DEBUG ~ Done printing active blog campaign list
+15:45:48,962 DEBUG ~ Following blogs are in fetch queue
+15:45:48,962 DEBUG ~ No more blogs in fetch queue
+15:45:50,269 INFO  ~ Checking to see if any feeds are to be fetched
+15:45:50,270 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:45:50,270 DEBUG ~ Done printing active blog campaign list
+15:46:20,293 INFO  ~ Checking to see if any feeds are to be fetched
+15:46:20,294 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:46:20,294 DEBUG ~ Done printing active blog campaign list
+15:46:50,325 INFO  ~ Checking to see if any feeds are to be fetched
+15:46:50,326 DEBUG ~ Following blog campaigns are active, but unscheduled today
+15:46:50,326 DEBUG ~ Done printing active blog campaign list
+15:47:18,990 DEBUG ~ Following blogs are in fetch queue
+15:47:18,990 DEBUG ~ No more blogs in fetch queue
+16:46:46,597 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+16:46:46,603 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+16:46:47,287 WARN  ~ You're running Play! in DEV mode
+16:46:47,404 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+12:03:41,417 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+12:03:41,422 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+12:03:42,136 WARN  ~ You're running Play! in DEV mode
+12:03:42,245 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+12:04:13,108 INFO  ~ Connected to jdbc:h2:~/db/h2/playProtected;MVCC=TRUE
+12:04:13,399 INFO  ~ JPA -> Adding package: com.marketo.mktows.wsdl
+12:04:14,199 INFO  ~ Application '2waySMS' is now started !
+12:04:44,255 INFO  ~ Checking to see if any feeds are to be fetched
+12:04:44,468 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:04:44,468 DEBUG ~ Done printing active blog campaign list
+12:05:14,525 INFO  ~ Checking to see if any feeds are to be fetched
+12:05:14,526 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:05:14,526 DEBUG ~ Done printing active blog campaign list
+12:05:44,260 DEBUG ~ Following blogs are in fetch queue
+12:05:44,260 DEBUG ~ No more blogs in fetch queue
+12:05:44,563 INFO  ~ Checking to see if any feeds are to be fetched
+12:05:44,564 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:05:44,564 DEBUG ~ Done printing active blog campaign list
+12:06:14,616 INFO  ~ Checking to see if any feeds are to be fetched
+12:06:14,617 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:06:14,617 DEBUG ~ Done printing active blog campaign list
+12:06:44,652 INFO  ~ Checking to see if any feeds are to be fetched
+12:06:44,653 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:06:44,653 DEBUG ~ Done printing active blog campaign list
+12:07:14,326 DEBUG ~ Following blogs are in fetch queue
+12:07:14,326 DEBUG ~ No more blogs in fetch queue
+12:07:14,674 INFO  ~ Checking to see if any feeds are to be fetched
+12:07:14,675 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:07:14,675 DEBUG ~ Done printing active blog campaign list
+12:07:44,698 INFO  ~ Checking to see if any feeds are to be fetched
+12:07:44,699 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:07:44,699 DEBUG ~ Done printing active blog campaign list
+12:08:14,738 INFO  ~ Checking to see if any feeds are to be fetched
+12:08:14,738 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:08:14,738 DEBUG ~ Done printing active blog campaign list
+12:08:44,355 DEBUG ~ Following blogs are in fetch queue
+12:08:44,355 DEBUG ~ No more blogs in fetch queue
+12:08:44,818 INFO  ~ Checking to see if any feeds are to be fetched
+12:08:44,819 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:08:44,820 DEBUG ~ Done printing active blog campaign list
+12:09:14,865 INFO  ~ Checking to see if any feeds are to be fetched
+12:09:14,865 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:09:14,865 DEBUG ~ Done printing active blog campaign list
+12:09:44,915 INFO  ~ Checking to see if any feeds are to be fetched
+12:09:44,916 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:09:44,916 DEBUG ~ Done printing active blog campaign list
+12:10:14,386 DEBUG ~ Following blogs are in fetch queue
+12:10:14,386 DEBUG ~ No more blogs in fetch queue
+12:10:14,951 INFO  ~ Checking to see if any feeds are to be fetched
+12:10:14,951 DEBUG ~ Following blog campaigns are active, but unscheduled today
+12:10:14,952 DEBUG ~ Done printing active blog campaign list
+16:32:52,044 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+16:32:52,049 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+16:32:52,828 WARN  ~ You're running Play! in DEV mode
+16:32:52,930 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:32:59,939 INFO  ~ Connected to jdbc:h2:~/db/h2/playProtected;MVCC=TRUE
+16:33:00,548 INFO  ~ JPA -> Adding package: com.marketo.mktows.wsdl
+16:33:01,805 WARN  ~ Defaults messsages file missing
+16:33:01,808 INFO  ~ Application '2waySMS' is now started !
+16:33:31,868 INFO  ~ Checking to see if any feeds are to be fetched
+16:33:32,035 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:33:32,035 DEBUG ~ Done printing active blog campaign list
+16:34:02,053 INFO  ~ Checking to see if any feeds are to be fetched
+16:34:02,054 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:34:02,054 DEBUG ~ Done printing active blog campaign list
+16:34:31,874 DEBUG ~ Following blogs are in fetch queue
+16:34:31,874 DEBUG ~ No more blogs in fetch queue
+16:34:32,073 INFO  ~ Checking to see if any feeds are to be fetched
+16:34:32,075 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:34:32,075 DEBUG ~ Done printing active blog campaign list
+16:35:02,092 INFO  ~ Checking to see if any feeds are to be fetched
+16:35:02,093 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:35:02,093 DEBUG ~ Done printing active blog campaign list
+16:35:32,111 INFO  ~ Checking to see if any feeds are to be fetched
+16:35:32,112 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:35:32,112 DEBUG ~ Done printing active blog campaign list
+16:36:01,924 DEBUG ~ Following blogs are in fetch queue
+16:36:01,924 DEBUG ~ No more blogs in fetch queue
+16:36:02,129 INFO  ~ Checking to see if any feeds are to be fetched
+16:36:02,131 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:36:02,132 DEBUG ~ Done printing active blog campaign list
+16:36:32,149 INFO  ~ Checking to see if any feeds are to be fetched
+16:36:32,150 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:36:32,150 DEBUG ~ Done printing active blog campaign list
+16:37:02,167 INFO  ~ Checking to see if any feeds are to be fetched
+16:37:02,183 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:37:02,183 DEBUG ~ Done printing active blog campaign list
+16:37:31,957 DEBUG ~ Following blogs are in fetch queue
+16:37:31,957 DEBUG ~ No more blogs in fetch queue
+16:37:32,200 INFO  ~ Checking to see if any feeds are to be fetched
+16:37:32,201 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:37:32,201 DEBUG ~ Done printing active blog campaign list
+16:38:02,251 INFO  ~ Checking to see if any feeds are to be fetched
+16:38:02,252 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:38:02,253 DEBUG ~ Done printing active blog campaign list
+16:38:32,285 INFO  ~ Checking to see if any feeds are to be fetched
+16:38:32,286 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:38:32,286 DEBUG ~ Done printing active blog campaign list
+16:39:01,987 DEBUG ~ Following blogs are in fetch queue
+16:39:01,987 DEBUG ~ No more blogs in fetch queue
+16:39:02,316 INFO  ~ Checking to see if any feeds are to be fetched
+16:39:02,317 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:39:02,317 DEBUG ~ Done printing active blog campaign list
+16:39:32,347 INFO  ~ Checking to see if any feeds are to be fetched
+16:39:32,347 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:39:32,348 DEBUG ~ Done printing active blog campaign list
+16:40:02,377 INFO  ~ Checking to see if any feeds are to be fetched
+16:40:02,377 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:40:02,377 DEBUG ~ Done printing active blog campaign list
+16:40:32,017 DEBUG ~ Following blogs are in fetch queue
+16:40:32,017 DEBUG ~ No more blogs in fetch queue
+16:40:32,436 INFO  ~ Checking to see if any feeds are to be fetched
+16:40:32,437 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:40:32,437 DEBUG ~ Done printing active blog campaign list
+16:41:02,466 INFO  ~ Checking to see if any feeds are to be fetched
+16:41:02,467 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:41:02,467 DEBUG ~ Done printing active blog campaign list
+16:41:32,520 INFO  ~ Checking to see if any feeds are to be fetched
+16:41:32,521 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:41:32,521 DEBUG ~ Done printing active blog campaign list
+16:42:02,047 DEBUG ~ Following blogs are in fetch queue
+16:42:02,047 DEBUG ~ No more blogs in fetch queue
+16:42:02,555 INFO  ~ Checking to see if any feeds are to be fetched
+16:42:02,556 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:42:02,556 DEBUG ~ Done printing active blog campaign list
+16:42:32,587 INFO  ~ Checking to see if any feeds are to be fetched
+16:42:32,587 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:42:32,587 DEBUG ~ Done printing active blog campaign list
+16:43:02,617 INFO  ~ Checking to see if any feeds are to be fetched
+16:43:02,617 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:43:02,618 DEBUG ~ Done printing active blog campaign list
+16:43:32,080 DEBUG ~ Following blogs are in fetch queue
+16:43:32,080 DEBUG ~ No more blogs in fetch queue
+16:43:32,648 INFO  ~ Checking to see if any feeds are to be fetched
+16:43:32,648 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:43:32,648 DEBUG ~ Done printing active blog campaign list
+16:44:02,667 INFO  ~ Checking to see if any feeds are to be fetched
+16:44:02,669 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:44:02,669 DEBUG ~ Done printing active blog campaign list
+16:44:32,686 INFO  ~ Checking to see if any feeds are to be fetched
+16:44:32,688 DEBUG ~ Following blog campaigns are active, but unscheduled today
+16:44:32,688 DEBUG ~ Done printing active blog campaign list
+16:45:02,241 ERROR ~ 
+
+@6k4gj3g24
+Error during job execution (jobs.FetchActiveFeeds)
+
+Compilation error (In /app/common/AppDefinition.java around line 7)
+The file /app/common/AppDefinition.java could not be compiled. Error raised is : ContentItem cannot be resolved to a type
+
+play.exceptions.CompilationException: ContentItem cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:426)
+	at play.Play.start(Play.java:516)
+	at play.Play.detectChanges(Play.java:642)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at play.jobs.Job.call(Job.java:138)
+	at Invocation.Job(Play!)
+16:45:14,697 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+16:45:14,701 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+16:45:15,281 WARN  ~ You're running Play! in DEV mode
+16:45:15,375 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:46:15,454 INFO  ~ Starting C:\SourceCode\Marketo-master\2waySMS
+16:46:15,457 INFO  ~ Module secure is available (C:\play-1.2.5\modules\secure)
+16:46:16,031 WARN  ~ You're running Play! in DEV mode
+16:46:16,127 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16:46:41,991 ERROR ~ 
+
+@6k4gj932e
+Internal Server Error (500) for request GET /login
+
+Compilation error (In /app/common/AppDefinition.java around line 7)
+The file /app/common/AppDefinition.java could not be compiled. Error raised is : ContentItem cannot be resolved to a type
+
+play.exceptions.CompilationException: ContentItem cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:426)
+	at play.Play.start(Play.java:516)
+	at play.Play.detectChanges(Play.java:630)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)

@@ -1,0 +1,361 @@
+#{extends 'main.html' /} #{top-results
+urlNew:"/mobConfig",urlResults:"/mobStatus"/}
+
+<p>
+<div class="row">
+	<div class="eleven columns offset-by-one">
+		#{form @Application.mobConfig()} <b><input type="text" name="name"
+			id="name" placeholder="Name of Mobile App" maxlength="200" size="100"
+			style="font-size: 36px; height: 2em" /></b>
+	</div>
+</div>
+<div class="row" id="allSettings">
+	<div class="row settings" id="settings1">
+		<fieldset id="fieldset1" class="ten columns offset-by-one fs"
+			style="padding: 10px">
+			<div class="row">
+				<div class="twelve columns">
+					<input type="text" name="label" id="label1"
+						placeholder="Widget Name" maxlength="2000" size="100"
+						style="font-size: 16px" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="six columns ">
+					<select id="type1" name="type" class="type" style="font-size: 14px">
+						<option value="WebView">Embed a Web Page</option>
+						<option value="YouTube">Embed a YouTube Video</option>
+						<option value="Map">Add a Map</option>
+					</select>
+				</div>
+				<div class="six columns" id="urldiv1" style="display: block">
+					<input type="text" name="url" id="url1" placeholder="URL"
+						maxlength="2000" size="100" style="font-size: 16px" />
+				</div>
+				<div class="three columns " id="latdiv1" style="display: none">
+					<input type="text" name="lattitude" id="lattitude1"
+						placeholder="Lattitude" maxlength="200" size="10"
+						style="font-size: 16px" />
+				</div>
+				<div class="three columns " id="longdiv1" style="display: none">
+					<input type="text" name="longitude" id="longitude1"
+						placeholder="Longitude" maxlength="200" size="10"
+						style="font-size: 16px" />
+				</div>
+			</div>
+		</fieldset>
+		<div class="one columns" style="padding-top: 92px">
+			<a class="round button addRow" id="addRow1" href="#">+</a> <a
+				class="alert round button removeRow" id="removeRow1" href="#"
+				style="display: none">-</a>
+		</div>
+		<!-- add/remove row -->
+	</div>
+	<!-- settings1 -->
+</div>
+<!-- allSettings -->
+<br>
+<div class="row">
+	<div class="eleven columns"></div>
+	<div class="one columns ">
+		<a class="success round button" id="submit" href="#">Submit</a>
+	</div>
+</div>
+#{/form}
+</p>
+
+
+<script>
+	var numRows = 1;
+	jQuery(function() {
+		$("#submit")
+				.click(
+						function() {
+							$(".alert-box").hide();
+							var hasError = false;
+
+							var nameVal = $("#name").val();
+							var reqJson = "{ ";
+
+							if (nameVal == '') {
+								$("#name")
+										.after(
+												'<div class="alert-box alert">Please provide a name for your mobile app</span>');
+								hasError = true;
+							} else {
+								reqJson += '"name" : "' + nameVal
+										+ '", "items" : [';
+							}
+							var numItems = 0;
+
+							$(".fs")
+									.each(
+											function() {
+												var arr = this.id
+														.split("fieldset");
+												var lbl = "#label" + arr[1];
+												var type = "#type" + arr[1];
+												var url = "#url" + arr[1];
+												var lat = "#lattitude" + arr[1];
+												var lng = "#longitude" + arr[1];
+
+												var lblVal = $(lbl).val();
+												var typeVal = $(type).val();
+												var typeValInt = 1002;
+												var urlVal = $(url).val();
+												var latVal = $(lat).val();
+												var lngVal = $(lng).val();
+
+												if (lblVal == '') {
+													$(lbl)
+															.after(
+																	'<div class="alert-box alert">Please provide a label</span>');
+													hasError = true;
+													return;
+												}
+
+												if (typeVal == 'WebView') {
+													typeValInt = 1002;
+												} else if (typeVal == 'YouTube') {
+													typeValInt = 1003;
+												} else if (typeVal == 'Map') {
+													typeValInt = 1004;
+												}
+
+												if ((typeValInt == 1002 || typeValInt == 1003)
+														&& urlVal == '') {
+													$(url)
+															.after(
+																	'<div class="alert-box alert">Please provide a URL</span>');
+													hasError = true;
+													return;
+												}
+
+												if (typeValInt == 1004
+														&& latVal == '') {
+													$(lat)
+															.after(
+																	'<div class="alert-box alert">Please provide the Lattitude</span>');
+													hasError = true;
+													return;
+												}
+
+												if (typeValInt == 1004
+														&& lngVal == '') {
+													$(lng)
+															.after(
+																	'<div class="alert-box alert">Please provide the Longitude</span>');
+													hasError = true;
+													return;
+												}
+
+												if (hasError == false) {
+													if (numItems > 0) {
+														reqJson += ",";
+													}
+													reqJson += "{\"type\" :\""
+															+ typeValInt
+															+ "\", \"label\":\""
+															+ lblVal
+															+ "\", \"url\":\""
+															+ urlVal
+															+ "\", \"lattitude\":\""
+															+ latVal
+															+ "\", \"longitude\":\""
+															+ lngVal + "\"}";
+													numItems++;
+												}
+
+											});
+							reqJson += "]}";
+							console.log(hasError, reqJson);
+
+							if (hasError == false) {
+								$
+										.ajax({
+											cache : false,
+											url : "/mobConfig?init=0&name="
+													+ nameVal,
+											type : "POST",
+											dataType : "json",
+											data : reqJson,
+											success : function(callback) {
+												//Where $(this) => context == FORM
+												console.log(JSON
+														.parse(callback));
+												window.location
+														.replace("/mobStatus");
+											},
+											error : function(textStatus) {
+												if (textStatus.status == 400) {
+													$("#name")
+															.after(
+																	'<div class="alert-box alert">Unable to store definition - try later</span>');
+												} else {
+													window.location
+															.replace("/mobStatus");
+												}
+											}
+										});
+							}
+
+							if (hasError == true) {
+								return false;
+							}
+						});
+	});
+
+	$(document).ready(
+			function() {
+				$("#mobdd").addClass("active");
+				var sName = '${storedName}';
+				$("#name").val(sName);
+
+				var json = '${json}';
+				json = json.replace(/&quot;/ig, '"');
+				//alert(json);
+				var obj = jQuery.parseJSON(json);
+				console.log(obj);
+				var numItems = obj.items.length;
+				var i = 1;
+				$.each(obj.items, function(index, itm) {
+					console.log(index + ":", itm.type, itm.label, itm.url,
+							itm.lattitude, itm.longitude);
+					if (i == 1) {
+						//populate first div
+						populateRow(i, numItems, itm);
+
+					} else {
+						//create divs
+						addNewRow(i - 1, i);
+						populateRow(i, numItems, itm);
+					}
+					i++;
+				});
+			});
+
+	function addNewRow(after, idx) {
+		var newSettings = "settings" + idx;
+		var newFieldset = "fieldset" + idx;
+		var newLabel = "label" + idx;
+		var newType = "type" + idx;
+		var newUrlDiv = "urldiv" + idx;
+		var newUrl = "url" + idx;
+		var newLatDiv = "latdiv" + idx;
+		var newLat = "lattitude" + idx;
+		var newLongDiv = "longdiv" + idx;
+		var newLong = "longitude" + idx;
+		var newAddRow = "addRow" + idx;
+		var newRemoveRow = "removeRow" + idx;
+
+		console.log("About to create new Fieldset:", after, idx);
+
+		var newRow = "	<div class=\"row settings\" id=\""  
+			+ newSettings + "\" ><fieldset id=\"" + newFieldset 
+			+ "\" class=\"ten columns offset-by-one fs\" style=\"padding: 10px\"><div class=\"row\"><div class=\"twelve  columns\"><input type=\"text\" name=\"label\" id=\"" 
+			+ newLabel + "\" placeholder=\"Widget Name\" maxlength=\"2000\" size=\"100\" style=\"font-size: 16px\" /></div></div><div class=\"row\"><div class=\"six columns \"><select id=\"" 
+			+ newType + "\" name=\"type\" class=\"type\" style=\"font-size: 14px\"><option value=\"WebView\">Embed a Web Page</option><option value=\"YouTube\">Embed a YouTube Video</option><option value=\"Map\">Add a Map</option></select></div><div class=\"six columns\" id=\"" 
+			+ newUrlDiv + "\" style=\"display: block\">	<input type=\"text\" name=\"url\" id=\"" 
+			+ newUrl + "\" placeholder=\"URL\" maxlength=\"2000\" size=\"100\" style=\"font-size: 16px\" /></div><div class=\"three columns \" id=\"" 
+			+ newLatDiv + "\" style=\"display: none\"><input type=\"text\" name=\"lattitude\" id=\"" 
+			+ newLat + "\" placeholder=\"Lattitude\" maxlength=\"200\" size=\"10\" style=\"font-size: 16px\" />	</div><div class=\"three columns \" id=\"" 
+			+ newLongDiv + "\" style=\"display: none\"><input type=\"text\" name=\"longitude\" id=\"" 
+			+ newLong + "\" placeholder=\"Longitude\" maxlength=\"200\" size=\"10\" style=\"font-size: 16px\" /></div></div></fieldset><div class=\"one columns\" style=\"padding-top: 92px\"><a class=\"round button addRow\" id=\"" 
+			+ newAddRow + "\" href=\"#\">+</a> <a class=\"alert round button removeRow\" id=\"" 
+			+ newRemoveRow + "\" href=\"#\"	style=\"display: none\">-</a></div> <!-- add/remove row --></div> <!-- settings1 -->";
+		$("#allSettings").append(newRow);
+
+		numRows++;
+	}
+
+	function populateRow(idx, numItems, itm) {
+		var lblId = '#label' + idx;
+		var urlId = '#url' + idx;
+		var latId = '#lattitude' + idx;
+		var lngId = '#longitude' + idx;
+		var typId = '#type' + idx;
+		var addRowId = '#addRow' + idx;
+		var remRowId = '#removeRow' + idx;
+		var urlDivId = '#urldiv' + idx;
+		var latDivId = '#latdiv' + idx;
+		var lngDivId = '#longdiv' + idx;
+
+		$(lblId).val(itm.label);
+		$(urlId).val(itm.url);
+		$(latId).val(itm.lattitude);
+		$(lngId).val(itm.longitude);
+		if (itm.type == 1002) {
+			//URL
+			$(typId).val("WebView");
+		} else if (itm.type == 1003) {
+			//youtube
+			$(typId).val("YouTube");
+		} else if (itm.type == 1004) {
+			//maps
+			$(typId).val("Map");
+			$(urlDivId).hide();
+			$(latDivId).show();
+			$(lngDivId).show();
+		}
+		if (idx < numItems) {
+			$(addRowId).hide();
+			$(remRowId).show();
+		}
+
+	}
+
+	// toggle latt/long values
+	$("#allSettings").on('change', '.type', function(event) {
+		var id = event.target.id;
+		var myId = "#" + id;
+		var arr = id.split("type");
+		console.log(arr[1]);
+		var val = $(myId).val();
+		console.log(val);
+		var myUrlId = "#urldiv" + arr[1];
+		var myLatId = "#latdiv" + arr[1];
+		var myLongId = "#longdiv" + arr[1];
+		if (val === "Map") {
+			$(myUrlId).hide();
+			$(myLatId).show();
+			$(myLongId).show();
+		} else {
+			$(myUrlId).show();
+			$(myLatId).hide();
+			$(myLongId).hide();
+		}
+	});
+
+	//add new row
+	$("#allSettings").on('click', '.addRow', function(event) {
+		var id = event.target.id;
+		var arr = id.split("addRow");
+		var removeId = "#removeRow" + arr[1];
+		var addId = "#" + id;
+		var settings = "#settings" + arr[1];
+
+		addNewRow(numRows, numRows + 1);
+
+		numRows++;
+		//rowIdx++;
+		if (numRows > 1) {
+			$(removeId).show();
+		}
+		$(addId).hide();
+	});
+
+	//remove a row
+	$("#allSettings").on('click', '.removeRow', function(event) {
+		var id = event.target.id;
+		var arr = id.split("removeRow");
+		var settings = "#settings" + arr[1];
+		if (numRows > 1) {
+			//alert("removing:" + settings);
+			$(settings).remove();
+			numRows--;
+		} else {
+			alert("Need at least one widget in the app");
+		}
+	});
+</script>
+

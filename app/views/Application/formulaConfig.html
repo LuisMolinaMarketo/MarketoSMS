@@ -1,0 +1,17 @@
+#{extends 'main.html' /} 
+
+#{top-results
+urlNew:"/formulaConfig",urlResults:"/execFormulaStatus"/}
+
+<p>
+	#{form @Application.formulaConfig()} <input type="text" name="url"
+		id="url" placeholder="URL of settings page." maxlength="200"
+		size="100" style="font-size: 16px" /> <br /> <input type="submit"
+		value="Submit" /> #{/form}
+
+</p>
+
+<script>
+	$(document).ready(function() {$("#formuladd").addClass("active");});
+</script>
+

@@ -1,0 +1,16 @@
+#{extends 'main.html' /} #{top-results
+urlNew:"/smsConfig",urlResults:"/savedSmsConfig"/}
+
+<!-- Main Content Section -->
+<p id="form">
+	#{form @Application.smsConfig()} <input type="text" name="url" id="url"
+		placeholder="URL of settings page." maxlength="200" size="100"
+		style="font-size: 16px" /> <br /> <input type="submit"
+		value="Submit" /> #{/form}
+
+</p>
+
+
+<script>
+	$(document).ready(function() {$("#smsdd").addClass("active");});
+</script>

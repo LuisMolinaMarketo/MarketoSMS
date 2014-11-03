@@ -1,0 +1,93 @@
+#{extends 'main.html' /} #{top-results
+urlNew:"/blogConfig",urlResults:"/blogStatus"/}
+
+<p>
+
+	#{form @Application.blogConfig()} <input type="text" name="url"
+		id="url" placeholder="URL of settings page (not the blog feed)." maxlength="200"
+		size="100" style="font-size: 16px" />
+	<!-- 		<input type="text" -->
+	<!-- 		name="days" id="days" placeholder="Mon, Wed, Fri" /> -->
+<fieldset id="days">
+	<div class="eight columns">
+		<input type="checkbox" id="mon" name="mon" value="Mon">Mon <input
+			type="checkbox" id="tue" name="tue" value="Tue">Tue <input
+			type="checkbox" id="wed" name="wed" value="Wed">Wed <input
+			type="checkbox" id="thu" name="thu" value="Thu">Thu <input
+			type="checkbox" id="fri" name="fri" value="Fri">Fri <input
+			type="checkbox" id="sat" name="sat" value="Sat">Sat <input
+			type="checkbox" id="sun" name="sun" value="Sun">Sun
+	</div>
+</fieldset>
+<div class="row">
+	<div class="five columns">
+		<input type="text" name="time" id="time"
+			placeholder="Time (in 24 hour format) - e.g, 1830" />
+	</div>
+	<div class="two columns pull-five">
+		<select id="tz" name="tz">
+			<option value="America/Los_Angeles">Pacific</option>
+			<option value="America/Phoenix">Mountain</option>
+			<option value="America/Chicago">Central</option>
+			<option value="America/New_York">East</option>
+		</select>
+	</div>
+</div>
+<input type="submit" id="submit" value="Submit" />
+#{/form}
+</p>
+
+
+<script>
+	jQuery(function() {
+		$("#submit")
+				.click(
+						function() {
+							$(".alert-box").hide();
+							var hasError = false;
+
+							var urlVal = $("#url").val();
+							var monVal = $("#mon").is(':checked');
+							var tueVal = $("#tue").is(':checked');
+							var wedVal = $("#wed").is(':checked');
+							var thuVal = $("#thu").is(':checked');
+							var friVal = $("#fri").is(':checked');
+							var satVal = $("#sat").is(':checked');
+							var sunVal = $("#sun").is(':checked');
+							var timeVal = $("#time").val();
+
+							if (urlVal == '') {
+								$("#url")
+										.after(
+												'<div class="alert-box alert">Please provide your Blog Digest Settings URL</span>');
+								hasError = true;
+							} else if (monVal == false && tueVal == false
+									&& wedVal == false && thuVal == false
+									&& friVal == false && satVal == false
+									&& sunVal == false) {
+								$("#days")
+										.after(
+												'<div class="alert-box alert">Please enter the days you wish to send the digest</span>');
+								hasError = true;
+							} else if (timeVal == '') {
+								$("#time")
+										.after(
+												'<div class="alert-box alert">Please enter the time you wish to send the digest</span>');
+								hasError = true;
+							} else if (timeVal > 2359 || timeVal < 0) {
+								$("#time")
+										.after(
+												'<div class="alert-box alert">Please enter a time between 0000 and 2359 hours</span>');
+								hasError = true;
+							}
+							if (hasError == true) {
+								return false;
+							}
+						});
+	});
+
+	$(document).ready(function() {
+		$("#blogdd").addClass("active");
+	});
+</script>
+
