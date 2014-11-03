@@ -22,6 +22,6 @@ public class FormulaCampaign extends Model {
 	public String programName;
 	public String statusMessage;
 	public String status;
-
 	public int numLeadsSynced;
+	public String defaultRegion;
 }
