@@ -3,6 +3,5 @@ conf/
 eclipse/
 logs/
 test-result/
-tmp/
 server.pid
-application.log*
+*.log
