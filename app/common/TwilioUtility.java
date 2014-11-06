@@ -30,8 +30,9 @@ public class TwilioUtility {
 
 	// TESTING TWILIO ACCOUNT
 	public static final String ACCOUNT_SID = "AC0c703aa863bdc91ce9b501165dd79644";
-	public static final String AUTH_TOKEN = "0139de0591840e8839a109412daa506f";
-	public static final String TWILIO_PHONE_NUM = "+18329815125";
+	public static final String AUTH_TOKEN = "0139de0591840e8839a109412daa506f";	
+	//public static final String TWILIO_PHONE_NUM = "+18329815125";
+	public static final String TWILIO_PHONE_NUM = "+12027596657";
 	
 	public static void main(String[] args) throws TwilioRestException {
 		/*
