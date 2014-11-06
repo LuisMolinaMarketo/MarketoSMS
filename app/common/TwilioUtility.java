@@ -22,10 +22,17 @@ import com.twilio.sdk.resource.list.IncomingPhoneNumberList;
 
 public class TwilioUtility {
 	// Find your Account Sid and Token at twilio.com/user/account
-	public static final String ACCOUNT_SID = "AC09e767fc3f77c6570adc1b5608166a16";
-	public static final String AUTH_TOKEN = "0139de0591840e8839a109412daa506f";
-	public static final String TWILIO_PHONE_NUM = "+16505675735";
+	
+	// PRODUCTION TWILIO ACCOUNT
+	//public static final String ACCOUNT_SID = "AC09e767fc3f77c6570adc1b5608166a16";
+	//public static final String AUTH_TOKEN = "38445a93bc8553162771adb05d7621c3";
+	//public static final String TWILIO_PHONE_NUM = "+16505675735";
 
+	// TESTING TWILIO ACCOUNT
+	public static final String ACCOUNT_SID = "AC0c703aa863bdc91ce9b501165dd79644";
+	public static final String AUTH_TOKEN = "0139de0591840e8839a109412daa506f";
+	public static final String TWILIO_PHONE_NUM = "+18329815125";
+	
 	public static void main(String[] args) throws TwilioRestException {
 		/*
 		 * sendSMS(ACCOUNT_SID, AUTH_TOKEN, TWILIO_PHONE_NUM, "+16506915076",
